@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ricorsione2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: forsili <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 11:02:23 by forsili           #+#    #+#             */
-/*   Updated: 2021/03/25 11:16:04 by forsili          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:47:52 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void		return_function(t_var_rec *vars, t_stack *s_a, int i)
 {
 	vars->tot_moves = i;
-	vars->deep = -1;
+	vars->deep = i;
 	free(vars->moves);
 	vars->moves = ft_arr_dup(s_a->moves, i + 1);
 	return ;
